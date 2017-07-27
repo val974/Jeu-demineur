@@ -14,7 +14,7 @@ function nombreAleatoire(){
 		let changement = tableauID[chiffre];//l'ordinateur choisit un id aléatoirement
 		cartes[changement].setAttribute("src","img/bombe.jpg"); //je remplace la source de l'id choisit par l'ordinateur
 		cartes[changement].addEventListener("click", score); //j'ajoute à cet id un évènement clic
-		setTimeout(function(){cartes[changement].setAttribute("src","img/pattern.png")},550)//je retourne les cartes au bout d'un certain temps
+		setTimeout(function(){cartes[changement].setAttribute("src","img/pattern.png")},1000)//je retourne les cartes au bout d'un certain temps
 	}
 
 
