@@ -13,7 +13,8 @@ for (let i =0; i<cartes.length;i++){ //je parcours mon tableau
 let bouton1 = document.querySelector("#button1");
 bouton1.addEventListener("click",function top(){
 
-let debut = setInterval(nombreAleatoire,1000); //je répète ma fonction 
+debut = setInterval(nombreAleatoire,1000)//je répète ma fonction 
+});
 
 function nombreAleatoire(){
 	let chiffre = Math.round(Math.random() * 8);//je choisis un nombre aléatoire
@@ -29,28 +30,8 @@ function score(e){
 	document.getElementById("pointsgagnes").innerHTML =  " Votre score est de : " + point;
 	e.currentTarget.removeEventListener("click", score); //j'enlève l'évènement clic pour qu'il ne garde pas le score en mémoire
 }
-});
-
 
 let bouton2 = document.querySelector("#button2");
 bouton2.addEventListener("click",function(){
+	clearInterval(debut);
 });
-
-
-
-
-/*function nombreAleatoire(e){
-	let chiffre = Math.round(Math.random() * 8);
-	for (let j=0;j<tableauID.length;j++){
-		let changement = tableauID[chiffre];
-		let position = cartes[changement].setAttribute("src","img/bombe.jpg");
-		tableauChoixOrdi.push(cartes[changement]);
-		console.log(tableauChoixOrdi);
-		tableauChoixOrdi=[];
-		cartes[changement].addEventListener("click", score);
-		
-		/*e.currentTarget.addEventListener("click", score);
-		setTimeout(function(){tableauChoixOrdi[0].setAttribute("src","img/pattern.png")},550)
-	}
-}
-*/
