@@ -35,3 +35,8 @@ let bouton2 = document.querySelector("#button2");
 bouton2.addEventListener("click",function(){
 	clearInterval(debut);
 });
+
+let bouton3 = document.querySelector("#button3");
+bouton3.addEventListener("click",function(){
+	clearInterval(debut);
+});
