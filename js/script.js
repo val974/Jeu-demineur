@@ -3,7 +3,8 @@
 let cartes = document.querySelectorAll('img');
 let tableauID = [];
 let point =0;
-
+/*let minutes = 0;
+let secondes = 0;*/
 
 for (let i =0; i<cartes.length;i++){ //je parcours mon tableau
 	let id = cartes[i].id;
@@ -37,6 +38,14 @@ bouton2.addEventListener("click",function(){
 });
 
 let bouton3 = document.querySelector("#button3");
-bouton3.addEventListener("click",function(){
-	clearInterval(debut);
+bouton3.addEventListener("click",function minuteur(){
+	debut = setInterval(nombreAleatoire,1000);
+	setTimeout(perdu,60000);
 });
+
+function perdu(){
+	alert("perdu");
+	clearInterval(debut);
+	/*document.getElementById("chronometre").innerHTML = "Il vous reste" + minutes + secondes;*/
+}
+console.log()
